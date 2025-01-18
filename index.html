@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="title">SHOT US</div>
+    <main>
+            <div class="shotus">
+                <a href="https://shotus.onrender.com/">
+                <div class="image-container">
+                    <video muted loop>
+                        <source src="assets/Wild-and-free.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="map-title">Wild And Free</div>
+                </a>
+            </div>
+
+            <div class="shotus">
+                <a href="https://shotus2.onrender.com/">
+                <div class="image-container">
+                    <video muted loop>
+                        <source src="assets/Little-maze.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="map-title">Little Maze</div>
+                </a>
+            </div>
+
+            <div class="shotus">
+                <a href="https://shotus3.onrender.com/">
+                <div class="image-container">
+                    <video muted loop>
+                        <source src="assets/Run-for-your-lies.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="map-title">Run for Your Lies</div>
+                </a>
+            </div>
+    </main>
+    <script>
+        // Selecteer alle video's
+        const videos = document.querySelectorAll('video');
+
+        videos.forEach(video => {
+            // Pauzeer de video standaard
+            video.pause();
+
+            // Start video bij hover
+            video.addEventListener('mouseenter', () => {
+                video.play();
+            });
+
+            // Pauzeer video als de muis weggaat
+            video.addEventListener('mouseleave', () => {
+                video.pause();
+            });
+        });
+    </script>
+</body>
+</html>
